@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Weather = () => { // Receive apiKey as a prop
+const Weather = (props) => { // Receive apiKey as a prop
   const [weatherData, setWeatherData] = useState([]);
-  const location = 'Zugdidi,GE'; // Use the location parameter as per WeatherAPI documentation
+  
+  const location = props.dropDownValue; // Use the location parameter as per WeatherAPI documentation
   
   const apiKey = 'df711456495b4ec2872175159230308'
 
@@ -26,7 +27,7 @@ const Weather = () => { // Receive apiKey as a prop
   return (
     
     <div className='w-11/12 h-auto py-6'>
-      <h2> {"{unset}"}-Day Weather Forecast for Zugdidi, Georgia</h2>
+      <h2> {"7"}-Day Weather Forecast for {location}, Georgia</h2>
       <ul>
         {weatherData.map((dayData, index) => (
           <li key={index}>
