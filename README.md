@@ -1,4 +1,4 @@
-# darAvdari weather app built by @dsakhuria
+# darAvdari weather app built by ![@dsakhuria]
 
 ![darAvdari Weather App](app-screenshot.png)
 
