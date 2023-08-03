@@ -1,4 +1,7 @@
-function Navbar() {
+import { useState } from "react";
+
+
+function Navbar(props) {
 
   let logoSvg = (
     <svg
@@ -29,12 +32,20 @@ function Navbar() {
     </svg>
   );
 
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleChangeIsOpen = () => {
+    if (isOpen === false) {setIsOpen(true)}
+    else {setIsOpen(false)}
+  }
+
+  
   return (
     <>
       <div className="navbar bg-neutral-900">
         <div className="navbar-start">
           <div className="dropdown">
-            <label tabIndex={0} className="btn btn-ghost btn-circle">
+            <label onClick={handleChangeIsOpen} tabIndex={0} className="btn btn-ghost btn-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -50,7 +61,7 @@ function Navbar() {
                 />
               </svg>
             </label>
-            <ul
+            {isOpen && <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
@@ -63,14 +74,14 @@ function Navbar() {
               <li>
                 <a>About</a>
               </li>
-            </ul>
+            </ul>}
           </div>
         </div>
         <div className="navbar-center">
           <a className="">{logoSvg}</a>
         </div>
         <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle">
+          <button onClick={props.navSearchBtn} className="btn btn-ghost btn-circle">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
