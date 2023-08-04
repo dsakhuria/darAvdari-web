@@ -1,13 +1,15 @@
 import "./App.css";
+import { useState } from "react";
+import { ToastContainer, toast, useToast } from "react-toastify";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MainInput from "./components/MainInput";
 import Weather from "./components/Weather";
-
-import { useState } from "react";
-import { ToastContainer, toast, useToast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import SearchBtn from "./components/SearchBtn";
+
+import "react-toastify/dist/ReactToastify.css";
+
+
 
 function App() {
   const navSearchBtn = () => {
