@@ -8,7 +8,7 @@ import Weather from "./components/Weather";
 import SearchBtn from "./components/SearchBtn";
 
 import "react-toastify/dist/ReactToastify.css";
-
+import { PacmanLoader } from "react-spinners";
 
 
 function App() {
@@ -33,13 +33,14 @@ function App() {
     }
   };
 
+  const [loading, setLoading] = useState(false);
+
   // feature to detect if location isnt chosen and if it is "choose location..."
   // const [ifChosenIsDefault, setifChosenIsDefault] = useState(false)
   // const handleifChosenIsDefaultChange = () => {
   //   setifChosenIsDefault(true)
   // }
 
-  console.log(executeStatus);
   return (
     <>
       <div
