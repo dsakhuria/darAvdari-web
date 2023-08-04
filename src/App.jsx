@@ -57,14 +57,14 @@ function App() {
                      sm:gap-[2rem] sm:min-h-screen
          "
         >
-          <div class=" w-full h-auto lg:flex lg:h-auto lg:items-center">
-            <div class="w-full h-full pt-10 text-center">
-              <span class="flex items-center justify-center h-auto gap-2 flex-col bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
-                <span class="text-6xl sm:block text-white"> Welcome to </span>
+          <div className=" w-full h-auto lg:flex lg:h-auto lg:items-center">
+            <div className="w-full h-full pt-10 text-center">
+              <span className="flex items-center justify-center h-auto gap-2 flex-col bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+                <span className="text-6xl sm:block text-white"> Welcome to </span>
                 <span>darAvdari WeatherAPP.</span>
               </span>
 
-              <span class="text-gray-400 mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+              <span className="text-gray-400 mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
                 Choose and check locations to get real-time weather information.
               </span>
               <span className="flex w-auto items-center justify-center gap-1">
