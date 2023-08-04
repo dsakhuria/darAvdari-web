@@ -17,7 +17,7 @@ function Footer() {
           <p>
             darAvdari &copy; All rights reserved
             <br />
-            designed by <a href="https://www.instagram.com/dachi.s_/" className="text-white" target="_blank">@dsakhuria</a>
+            built by <a href="https://www.instagram.com/dachi.s_/" className="text-white" target="_blank">@dsakhuria</a>
           </p>
         </div>
         <div>

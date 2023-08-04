@@ -10,7 +10,6 @@ import SearchBtn from "./components/SearchBtn";
 import "react-toastify/dist/ReactToastify.css";
 import { PacmanLoader } from "react-spinners";
 
-
 function App() {
   const navSearchBtn = () => {
     toast.info("Choose destination from menu!");
@@ -58,9 +57,28 @@ function App() {
                      sm:gap-[2rem] sm:min-h-screen
          "
         >
-          <span className="bg-[#181818] text-center text-4xl w-10/12 rounded-lg py-2">
-            Welcome to darAvdari
-          </span>
+          <div class=" w-full h-auto lg:flex lg:h-auto lg:items-center">
+            <div class="w-full h-full pt-10 text-center">
+              <span class="flex items-center justify-center h-auto gap-2 flex-col bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
+                <span class="text-6xl sm:block text-white"> Welcome to </span>
+                <span>darAvdari WeatherAPP.</span>
+              </span>
+
+              <span class="text-gray-400 mx-auto mt-4 max-w-xl sm:text-xl/relaxed">
+                Choose and check locations to get real-time weather information.
+              </span>
+              <span className="flex w-auto items-center justify-center gap-1">
+                <p className="text-gray-400">built by</p>
+                <a
+                  href="https://www.instagram.com/dachi.s_/"
+                  className="text-white"
+                  target="_blank"
+                >
+                  @dsakhuria
+                </a>
+              </span>
+            </div>
+          </div>
           <MainInput handleInputValueChange={handleInputValueChange} />
           <SearchBtn handleExecuteStatusChange={handleExecuteStatusChange} />
           <div>
