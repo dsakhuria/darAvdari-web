@@ -8,7 +8,7 @@ const Weather = (props) => {
   useEffect(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${props.apiKey}&q=${location}&days=7`
+        `https://api.weatherapi.com/v1/forecast.json?key=${props.apiKey}&q=${location}&days=7`
       )
       .then((response) => {
         setWeatherData(response.data.forecast.forecastday);
