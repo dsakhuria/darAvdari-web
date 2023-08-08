@@ -1,6 +1,17 @@
-
+import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 function MainInput(props) {
+
+
+    // languages
+    const { t, i18n } = useTranslation();
+    const currentLanguage = i18n.language; // get current language ('en' or 'ka')
+  
+    useEffect(() => {
+      document.body.setAttribute("lang", currentLanguage);
+    }, [currentLanguage]);
+
 
   return (
     <>
@@ -10,11 +21,11 @@ function MainInput(props) {
                         border-purple-700 focus:border-purple-950 focus:outline-purple-900 
                         ">
         <option className="text-neutral-500">
-          Choose location...
+          {t("chooseLocation")}
         </option>
+        <option>Chkhorotsku {" <3"}</option>
         <option>Tbilisi</option>
         <option>Batumi</option>
-        <option>Chkhorotsku</option>
         <option>Zugdidi</option>
       </select>
     </>
