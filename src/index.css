@@ -5,12 +5,12 @@
 
 @font-face {
   font-family: 'Space Grotesk';
-  src: url('../fonts/space-grotesk.ttf') format('truetype');
+  src: url('../fonts/SpaceGrotesk.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Mersad';
-  src: url('../fonts/mersad.ttf') format('truetype');
+  src: url('../fonts/Mersad.ttf') format('truetype');
 }
 
 * {

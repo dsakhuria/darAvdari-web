@@ -62,7 +62,7 @@ function App() {
         <section
           className="w-full h-[auto] gap-[2rem] my-6
                     flex flex-col items-center justify-around
-                     sm:gap-[2rem] sm:min-h-screen
+                     sm:gap-[0rem] sm:min-h-[70vh]
          "
         >
           <div className=" w-full h-auto lg:flex lg:h-auto lg:items-center">

@@ -49,7 +49,7 @@ function Navbar(props) {
             <label
               onClick={handleChangeIsOpen}
               tabIndex={0}
-              className="btn btn-ghost btn-circle"
+              className="btn btn-ghost btn-circle sm:ml-10"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,31 +66,31 @@ function Navbar(props) {
                 />
               </svg>
             </label>
-            {isOpen && (
-              <ul
-                tabIndex={0}
-                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-              >
-                <li>
-                  <a>Homepage</a>
-                </li>
-                <li>
-                  <a>Portfolio</a>
-                </li>
-                <li>
-                  <a>About</a>
-                </li>
-              </ul>
-            )}
-            <div className="hidden sm:inline-block pl-[1rem] items-center">
-              <LanguageSwitcher />
-            </div>
+              {isOpen && (
+                <ul
+                  tabIndex={0}
+                  className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                >
+                  <li>
+                    <a>Homepage</a>
+                  </li>
+                  <li>
+                    <a>Portfolio</a>
+                  </li>
+                  <li>
+                    <a>About</a>
+                  </li>
+                </ul>
+              )}
+              <div className="hidden sm:inline-block pl-[1rem] items-center">
+                <LanguageSwitcher />
+              </div>
           </div>
         </div>
         <div className="navbar-center">
           <a className="">{logoSvg}</a>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end sm:mr-10">
           <button
             onClick={props.navSearchBtn}
             className="btn btn-ghost btn-circle"
@@ -111,7 +111,7 @@ function Navbar(props) {
             </svg>
           </button>
           <button className="btn btn-ghost btn-circle">
-            <div className="indicator">
+            <div className="indicator ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
