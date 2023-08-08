@@ -68,7 +68,7 @@ function App() {
           <div className=" w-full h-auto lg:flex lg:h-auto lg:items-center">
             <div className="w-full h-full pt-10 text-center">
               <span className="flex items-center justify-center h-auto gap-2 flex-col bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
-                <span className="text-5xl sm:block text-white">
+                <span className="text-[2.6rem] sm:block text-white">
                   {t("welcome")}
                 </span>
                 <span>darAvdari WeatherAPP.</span>
@@ -95,7 +95,7 @@ function App() {
           </div>
           <MainInput handleInputValueChange={handleInputValueChange} />
           <SearchBtn handleExecuteStatusChange={handleExecuteStatusChange} />
-          <div>
+          <div className="text-center">
             {t("chosenLocation")}{" "}
             {<span className="text-gray-500">{dropDownValue}</span>}
           </div>
