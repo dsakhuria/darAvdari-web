@@ -4,12 +4,11 @@ import axios from "axios";
 const Weather = (props) => {
   const [weatherData, setWeatherData] = useState([]);
   const location = props.dropDownValue;
-  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
   useEffect(() => {
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`
+        `http://api.weatherapi.com/v1/forecast.json?key=${props.apiKey}&q=${location}&days=7`
       )
       .then((response) => {
         setWeatherData(response.data.forecast.forecastday);
@@ -18,6 +17,8 @@ const Weather = (props) => {
         console.error("Error fetching weather data:", error);
       });
   }, []);
+
+  console.log(props.apiKey)
 
   return (
     <div className="flex flex-col w-11/12 h-auto py-6 ">

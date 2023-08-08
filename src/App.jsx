@@ -40,6 +40,8 @@ function App() {
   //   setifChosenIsDefault(true)
   // }
 
+  let apiKey = import.meta.env.VITE_WEATHER_API_KEY //API
+
   return (
     <>
       <div
@@ -85,7 +87,7 @@ function App() {
             Chosen location:{" "}
             {<span className="text-gray-500">{dropDownValue}</span>}
           </div>
-          {executeStatus && <Weather dropDownValue={dropDownValue} />}
+          {executeStatus && <Weather apiKey={apiKey} dropDownValue={dropDownValue} />}
         </section>
         <Footer />
         <ToastContainer
