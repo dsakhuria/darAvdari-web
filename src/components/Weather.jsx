@@ -4,7 +4,7 @@ import axios from "axios";
 const Weather = (props) => {
   const [weatherData, setWeatherData] = useState([]);
   const location = props.dropDownValue;
-  const apiKey = "df711456495b4ec2872175159230308";
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
   useEffect(() => {
     axios
